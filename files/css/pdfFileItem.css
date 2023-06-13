@@ -1,0 +1,67 @@
+.AnnotatePdfItem
+{
+	border-width: 1px;
+    border-style: solid;
+	border-color: #e1e1e1;
+	width: 160px;
+    height: 168px;
+    margin-bottom: 13px;
+}
+
+.AnnotatePdfItemPreview
+{
+	background-color: rgb(255, 255, 255);
+    width: 160px;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+	background-position: 0px 0px;
+    background-size: cover;
+}
+
+.AnnotatePdfItemInfo
+{
+	width: 160px;
+    height: 48px;
+    left: 0px;
+    top: 120px;
+	background-color: #f2f8fd;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.AnnotatePdfItemInfoName
+{
+	height: auto;
+    width: 140px;
+    left: 10px;
+    top: 6px;
+	color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+	user-select: none;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.AnnotatePdfItemInfoDetail
+{
+	height: auto;
+    width: 140px;
+    left: 10px;
+    top: 27px;
+	color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+	user-select: none;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.AnnotatePdfFileSelectorCommon
+{
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    outline: transparent;
+    cursor: pointer;
+}

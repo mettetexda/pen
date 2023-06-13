@@ -1,0 +1,217 @@
+.AnnotateNet_commentThread
+{
+    pointer-events: auto;
+    border-radius: 2px;
+    z-index: 2147483644;
+    background-color: #f5f5f5;
+    font-size: 13px !important;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-height: 480px;
+    overflow: hidden scroll;
+    overflow-x: hidden scroll;
+    overflow-y: hidden scroll;
+}
+
+.AnnotateNet_commentItem
+{
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.AnnotateNet_commentItem .AnnotateNet_contents
+{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 18px;
+}
+
+.AnnotateNet_commentItem .AnnotateNet_contents a
+{
+    color: #0000EE;
+}
+
+.AnnotateNet_commentItem .AnnotateNet_contents a:visited
+{
+    color: #551A8B;
+}
+
+.AnnotateNet_commentItem .AnnotateNet_contents a:active
+{
+    color: #EE0000;
+}
+
+.AnnotateNet_commentThread .AnnotateNet_date, .AnnotateNet_commentThread .AnnotateNet_warningmsg
+{
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.AnnotateNet_commentThread .AnnotateNet_parentComment
+{
+    background-color: #fff;
+}
+
+textarea.AnnotateNet_widget{
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+.AnnotateNet_commentThread .AnnotateNet_commentEditor
+{
+    transition: opacity 0.3s;
+}
+
+.AnnotateNet_commentThread .AnnotateNet_commentReplyInput
+{
+    outline: none;
+    border: 1px solid #c8c8c8;
+    resize: none;
+    min-height: 26px;
+    line-height: 16px;
+    padding: 4px;
+    margin: 0px;
+    overflow-y: hidden;
+    font-family: "Roboto", -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Segoe UI", "Lucida Grande", sans-serif;
+    border-radius: 2px;
+    background-color: #fff;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    box-shadow: none;
+    cursor: text;
+    border-image: none;
+    float: none;
+    align-content: normal;
+    align-items: normal;
+    align-self: auto;
+    transition: none;
+}
+
+.AnnotateNet_commentThread .AnnotateNet_profileThumbnail
+{
+    font-size: 15px !important;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 500;
+    color: #fff;
+    background-color: #afafaf;
+}
+
+.AnnotateNet_commentThread .AnnotateNet_commentEditor .AnnotateNet_duration
+{
+    user-select: none;
+    cursor: default;
+    line-height: 26px;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    position: absolute;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+}
+
+.AnnotateNet_commentThread .AnnotateNet_deleteConfirmation
+{
+    outline: none;
+}
+
+.AnnotateNet_activeComment
+{
+    cursor: auto;
+}
+
+.AnnotateNet_select
+{
+    z-index: 2147483644;
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-sizing: content-box;
+}
+.AnnotateNet_select .AnnotateNet_element
+{
+    padding: 0px 16px;
+    cursor: pointer;
+}
+.AnnotateNet_select .AnnotateNet_element:hover
+{
+    background-color: #f5f5f5;
+}
+
+.AnnotateNet_leftpointer 
+{
+    width: 0;
+    height: 0;
+    border-right: 10px solid white;
+    border-bottom: 10px solid transparent;
+}
+
+.AnnotateNet_leftpointershadow
+{
+    border-right: 10px solid rgba(0, 0, 0, 0.7) !important;
+}
+
+.AnnotateNet_addCommentFloatingBtn
+{
+    pointer-events: auto;
+    z-index: 2147483644;
+    background-color: #fff;
+    border-radius: 50%;
+    color: rgba(0,0,0,0.87);
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 4px 0px, rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 20%) 0px 1px 8px 0px;
+    transition: all 0.2s ease-out;
+}
+
+.AnnotateNet_shadow 
+{
+    background: rgba(0, 0, 0, 0.7) !important;
+    color: #fff !important;
+    z-index: 2147483644;
+}
+
+.AnnotateNet_shadow .AnnotateNet_button, .AnnotateNet_shadow .AnnotateNet_buttonsmall
+{
+    background-color: #fff;
+}
+
+
+.AnnotateNet_commentIdentifier
+{
+    background-color: transparent;
+    color: rgb(0,0,0);
+}
+
+.AnnotateNet_commentIdentifier::before
+{
+    font-size: 16px !important;
+}
+
+.AnnotateNet_mediaElement
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 240px;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    object-fit: fill;
+}
+
+.AnnotateNet_commentVoiceRecordingElement
+{
+    height: 48px !important;
+}
+
+.AnnotateNet_commentScreenRecordingElement
+{
+    position: relative;
+}

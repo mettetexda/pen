@@ -1,0 +1,50 @@
+{
+   "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Annotate"
+   },
+   "api_console_project_id": "759190914734",
+   "background": {
+      "service_worker": "BackgroundMain.js"
+   },
+   "container": "GOOGLE_DRIVE",
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "files/css/highlight.css", "files/css/content.css", "files/css/texttool.css", "files/css/webAnnotationItem.css", "files/css/pdfFileItem.css", "files/css/comment.css", "files/css/mathquill.css", "files/css/extension-icons-material.min.css" ],
+      "js": [ "js/hammer.min.js", "js/mq-jquery.min.js", "js/mathquill-0.10.1/mathquill.js", "files/fonts/icons/extension-icons.js", "js/jspdf.umd.min.js", "js/ContentMain.js" ],
+      "match_about_blank": false,
+      "matches": [ "https://*/*", "http://*/*", "ftp://*/*", "file://*/*" ]
+   } ],
+   "description": "Annotate web pages, PDFs, Google Slides, and Google Docs to improve engagement. Annotate in Google Meet when screen sharing.",
+   "differential_fingerprint": "1.2005568529c862d7cae342763d8844467b8f63d310b04487a02057055240a346",
+   "gdrive_mime_types": {
+      "http://drive.google.com/intents/opendrivedoc": [ {
+         "disposition": "window",
+         "href": "https://annotate.net/docs/viewer",
+         "title": "Open",
+         "type": [ "application/pdf", "application/vnd.google.drive.ext-type.pdf" ]
+      } ]
+   },
+   "host_permissions": [ "*://*/*", "\u003Call_urls>" ],
+   "icons": {
+      "128": "icon.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjp+qvc6cz33wqSqBLrismtfHaWO1+YVZN5+Qq73V60bgfodTMWBhk+abZODn0DUcx1/aHMKSiVrSqfJgAqmMvECaQbphDiOPRl6kn4IbWOC3ZxvnlOtAbNKbpiNHPv1mQZH1JYr8PIcwtGKLzMyW4/laA1bbul0msWdNapsG+9UWXp1knM1SavUSMATv2RLD6Si9WBq2fJTDKhDx2xsVzOgxyyn86ySL0qp68TS4kcwOS0yJ6htcnMAaao74aXRkAbAQgea8WWEENaUhz4YkHSqSxx7b5ibhcqefD1+TaEyrBB1KT2e2eLGuJH5ryxOXWqoJUQ4aB2FFaPjGNJdx7wIDAQAB",
+   "manifest_version": 3,
+   "name": "Annotate: Web Annotations with Screen Sharing",
+   "oauth2": {
+      "client_id": "759190914734-tci7fg5s2c2c7d3g1s2ad3806liupkhg.apps.googleusercontent.com",
+      "scopes": [ "email", "https://www.googleapis.com/auth/drive.readonly", "https://www.googleapis.com/auth/drive.install" ]
+   },
+   "permissions": [ "desktopCapture", "activeTab", "contextMenus", "tabs", "storage", "alarms", "webNavigation", "scripting" ],
+   "short_name": "Annotate Screen Sharing",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "8.22",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*/*", "http://*/*", "ftp://*/*", "file://*/*" ],
+      "resources": [ "*.png", "images/*.png", "fonts/*.ttf", "files/css/*.css", "files/css/font/*.*", "audio/*.mp3", "files/fonts/icons/*.*" ]
+   } ]
+}

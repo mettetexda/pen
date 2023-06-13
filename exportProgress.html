@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Export annotations</title>
+    </head>
+    <body style="margin: 0; background-color: #fafafa;">
+        <style>
+            .extension_reset_css{
+                /*Layout */
+                align-content:normal;
+                align-items:normal;
+                align-self:auto;
+                bottom:auto;
+                box-sizing:content-box;
+                clear:none;
+                clip:auto;
+                display:block;
+                flex-basis:auto;
+                flex-direction:row;
+                flex-grow:0;
+                flex-shrink:1;
+                flex-wrap:nowrap;
+                float:none;
+                justify-content:normal;
+                left:auto;
+                margin-bottom:0px;
+                margin-left:0px;
+                margin-right:0px;
+                margin-top:0px;
+                max-block-size:none;
+                max-height:none;
+                max-inline-size:none;
+                max-width:none;
+                min-block-size:0px;
+                min-height:0px;
+                min-inline-size:0px;
+                min-width:0px;
+                order:0;
+                overflow: visible;
+                padding-bottom:0px;
+                padding-left:0px;
+                padding-right:0px;
+                padding-top:0px;
+                position:static;
+                resize:none;
+                right:auto;
+                top:auto;
+                width: auto;
+                height: auto;
+                block-size: auto;
+                inline-size: auto;
+                z-index:auto;
+                /*Text*/
+                direction: ltr;
+                font-family: Roboto, Arial, Helvetica, sans-serif;
+                font-weight: inherit;
+                font-size: inherit;
+                text-size-adjust: 100%;
+                font-stretch:100%;
+                font-style:normal;
+                font-variant-caps:normal;
+                font-variant-east-asian:normal;
+                font-variant-ligatures:normal;
+                font-variant-numeric:normal;
+                letter-spacing:normal;
+                line-height:normal;
+                tab-size:8;
+                text-align:start;
+                text-align-last:auto;
+                text-decoration-color:inherit;
+                text-decoration-line:none;
+                text-decoration-style:solid;
+                text-decoration-thickness:auto;
+                text-indent:0px;
+                text-overflow:clip;
+                text-shadow:none;
+                text-transform:none;
+                white-space:normal;
+                word-break:normal;
+                word-spacing:0px;
+                /*Appearance*/
+                color:inherit;
+                background-clip: padding-box;
+                cursor:default;
+                background-attachment:scroll;
+                background-color:rgba(0, 0, 0, 0);
+                background-image:none;
+                background-origin:padding-box;
+                background-position-x:0%;
+                background-position-y:0%;
+                background-size:auto;
+                border-bottom-color:inherit;
+                border-bottom-style:none;
+                border-bottom-width:0px;
+                border-image-outset:0;
+                border-image-repeat:stretch;
+                border-image-slice:100%;
+                border-image-source:none;
+                border-image-width:1;
+                border-left-color:inherit;
+                border-left-style:none;
+                border-left-width:0px;
+                border-right-color:inherit;
+                border-right-style:none;
+                border-right-width:0px;
+                border-top-color:inherit;
+                border-top-style:none;
+                border-top-width:0px;
+                box-shadow:none;
+                cursor:inherit;
+                outline-color:inherit;
+                outline-offset:0px;
+                outline-style:none;
+                outline-width:0px;
+                border-image: none;
+                border-radius: 0px;
+                -webkit-border-image:none;
+                visibility: inherit;
+                /*Other*/
+                transform: matrix(1, 0, 0, 1, 0, 0);
+                user-select: none;
+                -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+                color-scheme: light !important; /* to prevent html element color change in dark mode websites */
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .AnnotateDivElement {
+                position: absolute !important;
+                margin: 0 !important;
+                user-select: none;
+                color: rgba(0, 0, 0, 0.87);
+                font-family: Roboto,-apple-system,\.SFNSText-Regular,San Francisco,Helvetica Neue,Segoe UI,Lucida Grande,sans-serif;   
+            }
+            @-webkit-keyframes ld {
+                0% {
+                -webkit-transform: rotate(0deg) scale(1);
+                        transform: rotate(0deg) scale(1); }
+                50% {
+                -webkit-transform: rotate(180deg) scale(1.1);
+                        transform: rotate(180deg) scale(1.1); }
+                100% {
+                -webkit-transform: rotate(360deg) scale(1);
+                        transform: rotate(360deg) scale(1); }
+            }
+            @keyframes ld {
+                0% {
+                    -webkit-transform: rotate(0deg) scale(1);
+                            transform: rotate(0deg) scale(1); }
+                50% {
+                    -webkit-transform: rotate(180deg) scale(1.1);
+                            transform: rotate(180deg) scale(1.1); }
+                100% {
+                    -webkit-transform: rotate(360deg) scale(1);
+                            transform: rotate(360deg) scale(1); } 
+            }
+            .AnnotateLoading{
+                color: transparent !important;
+                text-shadow: none !important;
+            }
+            .AnnotateLoading::after{
+                content: '';
+                display: inline-block;
+                position: absolute;
+                background: transparent;
+                border: 2px solid #2196f3;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+                border-radius: 50%;
+                box-sizing: border-box;
+                top: 50%;
+                left: 50%;
+                margin-top: -10px;
+                margin-left: -10px;
+                width: 20px;
+                height: 20px;
+                -webkit-animation: ld 1s ease-in-out infinite;
+                animation: ld 1s ease-in-out infinite;
+            }
+            .annotate-wrap-text {
+                word-wrap: break-word;
+                word-break: break-word;
+            }
+
+            .annotate-modal {
+                overflow: hidden;
+                z-index: 2147483647;
+
+                display: block;
+                position: fixed;   
+                height: 70%;
+                width: 420px;
+                padding: 0px;
+
+                -webkit-text-size-adjust: 100%;
+                line-height: normal;
+                font-family: "Roboto", sans-serif;
+                font-weight: normal;
+                color: rgba(0, 0, 0, 0.87);
+                font-size: 16px;
+                box-sizing: border-box;
+                border-radius: 2px;
+            }
+
+            .annotate-loader-modal-content {  
+                overflow: hidden;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                height: auto; /**!important;*/    
+                width: 100%;
+                padding: 8px 24px;
+                -webkit-text-size-adjust: 100%;  
+                font-family: "Roboto", sans-serif;
+                font-weight: normal;
+                color: rgba(0, 0, 0, 0.87);
+                font-size: 20px;
+                line-height: 20px;
+                box-sizing: border-box;
+            }
+
+        </style>
+        <div class="extension_reset_css annotate-modal" style="width: 420px; height: 160px;">
+            <div class="annotate-loader-modal-content" style="height: 160px;">
+                <div class="extension_reset_css AnnotateDivElement AnnotateLoading" style="height: 36px; width: 36px; left: 24px; top: 40px;"></div>
+                <div class="extension_reset_css AnnotateDivElement annotate-wrap-text" style="height: auto; width: 320px; left: 76px; top: 43px;">File is being exported...</div>
+                <div class="extension_reset_css AnnotateDivElement annotate-wrap-text" style="height: auto; width: 360px; left: 24px; top: 100px; font-style: italic;">Please do not click, scroll, or navigate away from this tab.</div>
+            </div>
+        </div>
+    </body>
+</html>

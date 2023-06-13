@@ -1,0 +1,117 @@
+.AnnotateWebAnnotationItem {
+	border-width: 1px;
+    border-style: solid;
+	border-color: #e1e1e1;
+	width: 160px;
+    height: 168px;
+    margin-bottom: 13px;
+}
+
+.AnnotateWebAnnotationPreview {
+	background-color: rgb(255, 255, 255);
+    width: 160px;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+	background-position: 0px 0px;
+    background-size: cover;
+}
+
+.AnnotateWebAnnotationInfo {
+	width: 160px;
+    height: 48px;
+    left: 0px;
+    top: 120px;
+	background-color: #f2f8fd;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.AnnotateWebAnnotationIcon {
+	height:24px;
+	width:24px;
+	box-sizing: border-box;
+	top: 12px;
+	left: 8px;
+}
+
+.AnnotateWebAnnotationInfoName {
+	height: auto;
+    width: 115px;
+    left: 40px;
+    top: 6px;
+	color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+	user-select: none;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.AnnotateWebAnnotationInfoDetail {
+	height: auto;
+    width: 115px;
+    left: 40px;
+    top: 27px;
+	color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+	user-select: none;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.AnnotateWebAnnotationSelectedDiv {
+	width: 160px;
+    height: 168px;
+    left: 0px;
+    top: 0px;
+}
+
+.AnnotateWebAnnotationSelectedDivBackground {
+	width: 160px;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+	background-color: #616161;
+    opacity: 0.5;
+}
+
+.AnnotateWebAnnotationSelectedDivCheckBackground {
+	width: 36px;
+    height: 36px;
+    left: 62px;
+    top: 42px;
+	background-color: #2196f3;
+    border: 0px;
+    opacity: 1;
+	border-radius: 100%;
+	box-sizing: border-box;
+}
+
+.AnnotateWebAnnotationSelectedDivCheck {
+	width: 24px;
+    height: 24px;
+    left: 68px;
+    top: 48px;
+	color: #fff;
+    opacity: 1;
+}
+
+.AnnotateWebAnnotationSelectedDivInfo {
+	background-color: #2196f3;
+    opacity: 0.12;
+	width: 160px;
+    height: 48px;
+    left: 0px;
+    top: 120px;	
+}
+
+.AnnotateWebAnnotationCommon {
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    outline: transparent;
+    cursor: pointer;
+}
